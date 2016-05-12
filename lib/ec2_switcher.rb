@@ -4,7 +4,9 @@ require "aws-sdk"
 class Switcher
 
   attr_accessor :ec2
+  attr_accessor :aws
   attr_accessor :region
+  attr_accessor :credentials
 
   def initialize(id)
     @region = set_region

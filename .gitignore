@@ -7,4 +7,4 @@
 /pkg/
 /spec/reports/
 /tmp/
-ec2_switcher-0.1.1.gem
+*.gem
