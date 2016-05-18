@@ -9,6 +9,7 @@ class Switcher
   attr_accessor :credentials
 
   def initialize(id)
+    binding.pry
     @region = set_region
     @credentials = set_credentials
     @aws = aws_connection
@@ -53,7 +54,7 @@ class Switcher
   end
 
   def set_region
-    region = 'eu-west-1' if defined?(EC2_AMAZON_REGION).nil?
+    defined?(EC2_AMAZON_REGION).nil? ? EC2_AMAZON_REGION : 'eu-west-1'
   end
 
   def set_credentials
