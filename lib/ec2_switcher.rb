@@ -9,7 +9,6 @@ class Switcher
   attr_accessor :credentials
 
   def initialize(id)
-    binding.pry
     @region = set_region
     @credentials = set_credentials
     @aws = aws_connection
