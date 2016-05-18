@@ -49,11 +49,11 @@ class Switcher
   private
 
   def constants_not_defined?
-    defined?(AMAZON_ACCESS_KEY).nil? || defined?(AMAZON_SECRET_ACCESS).nil?
+    defined?(EC2_AMAZON_ACCESS_KEY).nil? || defined?(EC2_AMAZON_SECRET_ACCESS).nil?
   end
 
   def set_region
-    region = 'eu-west-1' if defined?(AMAZON_REGION).nil?
+    region = 'eu-west-1' if defined?(EC2_AMAZON_REGION).nil?
   end
 
   def set_credentials
@@ -62,7 +62,7 @@ class Switcher
       Aws::SharedCredentials.new(profile_name: 'ec2')
     else
       puts 'global variables connection'
-      Aws::Credentials.new(AMAZON_ACCESS_KEY, AMAZON_SECRET_ACCESS)
+      Aws::Credentials.new(EC2_AMAZON_ACCESS_KEY, EC2_AMAZON_SECRET_ACCESS)
     end
   end
 

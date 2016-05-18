@@ -28,11 +28,11 @@ Or install it yourself as:
 
 Add as environment variables:
 
-`AMAZON_REGION = 'your-region-1'`
+`EC2_AMAZON_REGION = 'your-region-1'`
 
-`AMAZON_ACCESS_KEY = 'your-access-key'`
+`EC2_AMAZON_ACCESS_KEY = 'your-access-key'`
 
-`AMAZON_SECRET_ACCESS = 'your-secret-access-key'`
+`EC2_AMAZON_SECRET_ACCESS = 'your-secret-access-key'`
 
 
 **Second method**
