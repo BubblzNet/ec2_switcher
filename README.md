@@ -46,7 +46,7 @@ And prototype it like this ->
 aws_access_key_id = youraccesskey
 aws_secret_access_key = yoursecretaccesskey
 ```
-**If your ec2 server is located somewhere else than `eu-west-1`, please fill up `AMAZON_REGION` variable**
+**If your ec2 server is located somewhere else than `eu-west-1`, please fill up `EC2_AMAZON_REGION` variable**
 
 ## Usage
 
@@ -56,6 +56,10 @@ Initialize a new switcher with your instance-id `switcher = Switcher.new('i-your
 
 Then juste use `switcher.auto` to turn on your instance if it's down / off if it's up
 
+`switcher.running?` indicates if the instance is running (instance state is reloaded automatically)
+`switcher.on` truns on the instance
+`switcher.off` turns off the instance
+`switcher.reload` reloads state of instance (example: The instance could have changed informations, so don't forget to reload to get fresh infos)
 
 ### Pro-Tips
 
